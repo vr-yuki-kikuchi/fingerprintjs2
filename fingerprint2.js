@@ -1414,13 +1414,14 @@
       if (key == "userAgent") {
         var parser = new UAParser(value); // https://github.com/faisalman/ua-parser-js
         var userAgentMinusVersion = parser.getOS().name + ' ' + parser.getBrowser().name;
+        console.log("userAgentMinusVersion:" + userAgentMinusVersion);
         return userAgentMinusVersion;
       }
       return value;
     }
   },function(components) {
     // userAgent component will contain string processed with our function. For example: Windows Chrome
-    console.log(components);
+    console.log("components:" + components);
   });
 
   Fingerprint2.x64hash128 = x64hash128
